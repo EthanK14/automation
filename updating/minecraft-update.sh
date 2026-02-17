@@ -16,7 +16,7 @@ FLOODGATE_JAR="floodgate.jar"
 # Backup the world data before updating
 ./minecraft-backup.sh
 
-# Stop the server before updating
+# Stop the server before updating (Needs to be updates to include autorun script)
 screens -S minecraft -X stuff "stop^M"
 
 # update process
@@ -30,5 +30,5 @@ wget "https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/la
 wget "https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot" -o "$SERVER_PATH/floodgate-spigot.jar"
 
 
-# restart the server after update is complete
+# restart the server after update is complete (Needs to be updates to include autorun script)
 screens -S minecraft -X stuff "java -Xmx4G -Xms4G -jar server.jar nogui^M"
